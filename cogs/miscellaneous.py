@@ -17,7 +17,7 @@ class Misc(commands.Cog):
 
         if ctx.guild:
             await ctx.message.delete()
-            await ctx.send(f'**CAREFUL {ctx.message.author.mention}!** You just sent that in the server! I have deleted your message and forwarded it to you, but next time PLEASE DM me instead!')
+            await ctx.message.author.send(f'**CAREFUL {ctx.message.author.mention}!** You just sent that in the server! I have deleted your message and forwarded it to you, but next time PLEASE DM me instead!')
             await ctx.message.author.send(message)
             return
 
