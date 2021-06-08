@@ -31,7 +31,8 @@ class Bot(commands.Cog):
         
         embed.add_field(name = 'Created on', value = 'June 6th, 2021', inline = False)
         embed.add_field(name = 'Created by', value = '<@466303359343656973>', inline = False)
-        embed.add_field(name = 'Want your own bot?', value = 'DM me and we can talk!', inline = False)
+        embed.add_field(name = 'Links', value = '[GitHub](https://github.com/ShibePlanet/crusader-of-homies)')
+        embed.set_footer(text = 'Want your own bot? DM me and we can talk!')
 
         await ctx.send(embed=embed)
 
