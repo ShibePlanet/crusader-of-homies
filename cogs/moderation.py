@@ -31,10 +31,10 @@ class Mod(commands.Cog):
             await channel.send(f'{user.mention}, you have been sent to Gay Baby Jail. Please use this format to return to society:\n`I am sorry for (reason).`')
 
 
-    # GBJ
+    # UNGBJ
     @commands.command()
     @commands.has_permissions(kick_members = True)
-    async def gbj(self, ctx, user: discord.Member = None):
+    async def ungbj(self, ctx, user: discord.Member = None):
         if user == None:
             await ctx.send('Please add a member. For more help, use `c!help`.')
             return 
