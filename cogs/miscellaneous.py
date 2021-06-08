@@ -13,7 +13,7 @@ class Misc(commands.Cog):
     @commands.command()
     @commands.cooldown(5, 3, commands.BucketType.user)
     async def vent(self, ctx, *, message = None):
-        channel = self.client.get_channel(851612376784044093)
+        channel = self.client.get_channel(851320205829603329)
 
         if ctx.guild:
             await ctx.message.delete()
