@@ -10,6 +10,7 @@ class Misc(commands.Cog):
 
 
     # Vent
+    '''
     @commands.command()
     @commands.cooldown(5, 3, commands.BucketType.user)
     async def vent(self, ctx, *, message = None):
@@ -28,7 +29,7 @@ class Misc(commands.Cog):
         
         await channel.send(message)
         await ctx.send('Your message has been sent.')
-
+    '''
 
     # Avatar
     @commands.command()

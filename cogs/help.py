@@ -16,7 +16,7 @@ class Help(commands.Cog):
 
         embed.add_field(name = 'Bot commands', value = '`c!help` - displays this page. \n`c!info` - display some info. \n`c!ping` - displays the client latency.', inline = False)
         embed.add_field(name = 'Fun commands', value = '`c!dice` - roll a six-sided die. \n`c!coinflip` - flip a coin. \n`c!choose [fields]` - choose from a few inputs.', inline = False)
-        embed.add_field(name = 'Miscellaneous commands', value = '`c!vent (message)` - **USE THIS IN MY BOT DMS TO PREVENT EXPOSURE.** Post an anonymous vent. \n`c!avatar <@user>` - get someone\'s avatar', inline = False)
+        embed.add_field(name = 'Miscellaneous commands', value = '`c!avatar <@user>` - get someone\'s avatar', inline = False)
         embed.set_footer(text = '(one) [one or more] {two or more} <optional>')
 
         await ctx.send(embed = embed)
