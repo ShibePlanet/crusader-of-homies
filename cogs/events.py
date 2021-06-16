@@ -12,7 +12,7 @@ class Events(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         print(f'Bot is online!')
-    
+
 
     # Errors
     @commands.Cog.listener()
@@ -29,6 +29,9 @@ class Events(commands.Cog):
         # Max concurrency
         elif isinstance(error, commands.MaxConcurrencyReached):
             await ctx.message.add_reaction('⏳')
+
+        elif isinstance(error, commands.MissingPermissions):\
+            await ctx.send('Sorry, you\'re missing the permissions to do that.')
 
         else:
             await ctx.send('An error occured with your command.')

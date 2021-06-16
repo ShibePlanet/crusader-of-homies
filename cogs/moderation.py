@@ -31,11 +31,6 @@ class Mod(commands.Cog):
             await ctx.send(f'{user.mention} was sent to gbj.')
             await channel.send(f'{user.mention}, you have been sent to Gay Baby Jail. Please use this format to return to society:\n`I am sorry for (reason).`')
 
-    @gbj.error
-    async def gbj_error(self, ctx, error):
-        if isinstance(error, MissingPermissions):
-            await ctx.send('Sorry, you don\'t have the permissions to do that.')
-
 
     # UNGBJ
     @commands.command()
@@ -55,10 +50,6 @@ class Mod(commands.Cog):
             await ctx.send('That person doesn\'t have that role. Do you mean `c!gbj (member)`?')
             return 
 
-    @ungbj.error
-    async def gbj_error(self, ctx, error):
-        if isinstance(error, MissingPermissions):
-            await ctx.send('Sorry, you don\'t have the permissions to do that.')
 
 # Setup
 def setup(client):
