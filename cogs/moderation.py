@@ -29,7 +29,7 @@ class Mod(commands.Cog):
             await user.add_roles(role)
 
             await ctx.send(f'{user.mention} was sent to gbj.')
-            await channel.send(f'{user.mention}, you have been sent to Gay Baby Jail. Please use this format to return to society:\n`I am sorry for (reason).`')
+            await channel.send(f'{user.mention}, you\'ve been sent to Gay Baby Jail.\nAppeal: `I am sorry for (reason).`')
 
 
     # UNGBJ
@@ -48,6 +48,46 @@ class Mod(commands.Cog):
             await ctx.send(f'{user.mention} was removed from gbj.')
         else: 
             await ctx.send('That person doesn\'t have that role. Do you mean `c!gbj (member)`?')
+            return 
+
+
+    # FG
+    @commands.command()
+    @commands.has_permissions(kick_members = True)
+    async def fg(self, ctx, user: discord.Member = None):
+        if user == None:
+            await ctx.send('Please add a member. For more help, use `c!help`.')
+            return 
+        
+        role = discord.utils.get(user.guild.roles, name='furry gulag')
+        channel = discord.utils.get(user.guild.channels, name = 'furry-gulag')
+
+        if role in user.roles:
+            await ctx.send('That person already has that role. Do you mean `c!unfg (member)`?')
+            return 
+        else: 
+            await user.add_roles(role)
+
+            await ctx.send(f'{user.mention} was sent to the furry gulag.')
+            await channel.send(f'{user.mention}, you\'re a furry. How does it feel? DM staff if you have an issue.')
+
+
+    # UNFG
+    @commands.command()
+    @commands.has_permissions(kick_members = True)
+    async def unfg(self, ctx, user: discord.Member = None):
+        if user == None:
+            await ctx.send('Please add a member. For more help, use `c!help`.')
+            return 
+        
+        role = discord.utils.get(user.guild.roles, name='furry gulag')
+        channel = discord.utils.get(user.guild.channels, name = 'furry-gulag')
+
+        if role in user.roles:
+            await user.remove_roles(role)
+            await ctx.send(f'{user.mention} was removed from the furry gulag.')
+        else: 
+            await ctx.send('That person doesn\'t have that role. Do you mean `c!fg (member)`?')
             return 
 
 
