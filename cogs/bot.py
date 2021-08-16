@@ -26,7 +26,7 @@ class Bot(commands.Cog):
 
     # Info
     @commands.command()
-    async def info(aelf, ctx):
+    async def info(self, ctx):
         embed = discord.Embed(title = 'Info!', color = discord.Color.green())
         
         embed.add_field(name = 'Created on', value = 'June 6th, 2021', inline = False)
