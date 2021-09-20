@@ -19,7 +19,7 @@ class Admin(commands.Cog):
             await ctx.send('Sorry, you\'re not a bot admin!')
 
     @commands.command()
-    async def listening(self, ctx, *, status = 'a game.'):
+    async def listening(self, ctx, *, status = 'a song.'):
         if ctx.message.author.id == 466303359343656973:
             await self.client.change_presence(activity = discord.Activity(type = discord.ActivityType.listening, name = status))
             await ctx.send(f'Status changed to: `Listening to {status}`')
@@ -27,7 +27,7 @@ class Admin(commands.Cog):
             await ctx.send('Sorry, you\'re not a bot admin!')
 
     @commands.command()
-    async def watching(self, ctx, *, status = 'a game.'):
+    async def watching(self, ctx, *, status = 'you.'):
         if ctx.message.author.id == 466303359343656973:
             await self.client.change_presence(activity = discord.Activity(type = discord.ActivityType.watching, name = status))
             await ctx.send(f'Status changed to: `Watching {status}`')
